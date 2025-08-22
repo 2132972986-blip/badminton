@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>羽毛球运动展示</title>
+<style>
+:root {
+  --bg: #f9fafb; --card: #fff; --accent: #2563eb; --text: #111827;
+  --muted: #6b7280; --radius: 1.25rem; --shadow: rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+main{max-width:1100px;margin:auto;padding:2rem 1rem 5rem;display:grid;gap:2rem;}
+section{background:var(--card);padding:2rem;border-radius:var(--radius);box-shadow:0 4px 12px var(--shadow);}
+h1,h2{margin-bottom:1rem;font-weight:700;}
+h1{font-size:2rem;}
+h2{font-size:1.5rem;color:var(--accent);}
+p{margin-bottom:1rem;}
+.muted{color:var(--muted);font-size:0.95rem;}
+.accent{color:var(--accent);}
+.row{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+.card{background:var(--card);border-radius:var(--radius);padding:1.5rem;box-shadow:0 2px 8px var(--shadow);}
+.btn{display:inline-block;padding:.5rem 1rem;background:var(--accent);color:#fff;border-radius:.75rem;text-decoration:none;font-size:.9rem;cursor:pointer;}
+.btn:hover{opacity:.9;}
+
+/* 封面 */
+.cover{align-items:center;display:grid;grid-template-columns:repeat(12,1fr);}
+.cover-img{grid-column:span 5;display:flex;justify-content:center;align-items:center;}
+.cover-img img{width:100%;max-width:500px;height:auto;border-radius:1rem;box-shadow:0 10px 30px var(--shadow);display:block;margin:0 auto;}
+.cover-title{font-size:2.5rem;margin-bottom:1rem;color:var(--accent);font-weight:800;text-align:left;}
+
+/* 导航 */
+.nav{position:fixed;bottom:1rem;right:1rem;display:flex;gap:.5rem;flex-wrap:wrap;}
+.nav button{border:none;background:var(--accent);color:white;border-radius:50%;width:40px;height:40px;font-size:1.25rem;cursor:pointer;box-shadow:0 2px 6px var(--shadow);}
+.nav button:hover{opacity:.9;}
+
+/* 手机端 */
+@media (max-width:768px){
+  .cover{grid-template-columns:1fr;text-align:center;}
+  .cover-img{grid-column:span 12;margin-top:1rem;}
+  .cover-title{font-size:2rem;text-align:center;}
+  .row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<main id="slides">
+
+<!-- 封面 -->
+<section class="cover row">
+  <div class="card" style="grid-column: span 7;">
+    <h1 class="cover-title">羽毛球运动</h1>
+    <p><strong>为什么学羽毛球？</strong> 强心肺、练反应、低门槛、高乐趣。无论是学校社团还是城市球馆，都能轻松加入。</p>
+    <p>羽毛球是一项<strong>老少皆宜</strong>的运动，既能锻炼身体，又能增进社交。它节奏快、对抗强，既能增强体质，也能提升思维与判断能力。</p>
+    <p>与篮球、足球不同，羽毛球场地占地小，装备门槛低，一支球拍、一筒羽毛球就能开打，因而成为中国最受欢迎的运动之一。</p>
+    <p class="muted">提示：按 <span class="kbd">←</span> / <span class="kbd">→</span> 或空格切换，点击右下角按钮也可导航。</p>
+  </div>
+  <div class="cover-img">
+    <img src="images/R.jpg" alt="badminton" />
+  </div>
+</section>
+
+<!-- 运动特点 -->
+<section>
+<h2>羽毛球的魅力</h2>
+<div class="row">
+  <div class="card"><h3>🏃‍♂️ 健身</h3><p>每场可消耗 400~600 卡路里。</p></div>
+  <div class="card"><h3>🤝 社交</h3><p>双打协作，增强沟通与配合。</p></div>
+  <div class="card"><h3>🧠 专注</h3><p>高速来球，锻炼反应和判断。</p></div>
+</div>
+</section>
+
+<!-- 历史 -->
+<section>
+<h2>小历史</h2>
+<p>羽毛球起源于19世纪的英格兰，1900年前后传入亚洲。如今，中国、印尼、马来西亚、丹麦等国均为世界强国。</p>
+</section>
+
+<!-- 规则 1 -->
+<section>
+<h2>羽毛球规则：计分</h2>
+<p>采用 <strong>21 分制</strong>，一局先到 21 分并且领先 2 分的一方获胜。如果双方打成 29 平，则先到 30 分的一方获胜。</p>
+</section>
+
+<!-- 规则 2 -->
+<section>
+<h2>羽毛球规则：发球</h2>
+<p>发球必须斜线发到对角场区，球拍击球点需低于发球员的腰部。双打时，奇数分从左发，偶数分从右发。</p>
+</section>
+
+<!-- 规则 3 -->
+<section>
+<h2>羽毛球规则：场地</h2>
+<p>单打场地：宽 5.18 米，长 13.4 米。<br>
+双打场地：宽 6.1 米，长 13.4 米。<br>
+中间由 1.55 米高的球网分隔。</p>
+</section>
+
+<!-- 知识问答 -->
+<section class="quiz">
+<h2>快问快答 🎯</h2>
+<p>羽毛球一局多少分？</p>
+<div>
+  <button class="btn" data-answer="A">15分</button>
+  <button class="btn" data-answer="B">21分</button>
+</div>
+<p id="quiz-tip" class="muted"></p>
+</section>
+
+<!-- 数据展示 -->
+<section>
+<h2>运动数据</h2>
+<div class="row" id="metrics"></div>
+</section>
+
+<!-- 装备推荐 -->
+<section>
+<h2>推荐装备 🏸</h2>
+<div class="row">
+  <div class="card">
+    <h3>羽毛球拍</h3>
+    <p>轻巧耐用，适合初学者与业余爱好者。</p>
+    <a href="https://uland.taobao.com/sem/tbsearch?...keyword=%E5%B0%A4%E5%B0%BC%E5%85%8B%E6%96%AF%E7%BE%BD%E6%AF%9B%E7%90%83%E6%8B%8D" target="_blank" class="btn">去淘宝购买</a>
+  </div>
+  <div class="card">
+    <h3>羽毛球</h3>
+    <p>尼龙球耐打，羽毛球手感佳，适合不同场景。</p>
+    <a href="https://uland.taobao.com/sem/tbsearch?...keyword=%E5%B0%A4%E5%B0%BC%E5%85%8B%E6%96%AF%E7%BE%BD%E6%AF%9B%E7%90%83" target="_blank" class="btn">去淘宝购买</a>
+  </div>
+</div>
+</section>
+
+<!-- 场馆搜索 -->
+<section>
+<h2>查找附近场馆 📍</h2>
+<p>想要开打？点击下方按钮，快速搜索你附近的羽毛球馆：</p>
+<div class="row">
+  <div class="card">
+    <h3>百度地图</h3>
+    <a href="https://map.baidu.com/search/%E7%BE%BD%E6%AF%9B%E7%90%83%E9%A6%86" target="_blank" class="btn">打开百度地图</a>
+  </div>
+  <div class="card">
+    <h3>高德地图</h3>
+    <a href="https://www.amap.com/search?query=%E7%BE%BD%E6%AF%9B%E7%90%83%E9%A6%86" target="_blank" class="btn">打开高德地图</a>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- 导航 -->
+<div class="nav">
+  <button id="prev">←</button>
+  <button id="next">→</button>
+</div>
+
+<script>
+// 幻灯片切换
+const slides=document.querySelectorAll("main section");
+let idx=0;
+function updateDeck(){slides.forEach((s,i)=>{s.style.display=i===idx?"block":"none";});}
+document.getElementById("next").onclick=()=>{idx=(idx+1)%slides.length;updateDeck();};
+document.getElementById("prev").onclick=()=>{idx=(idx-1+slides.length)%slides.length;updateDeck();};
+document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowRight"||e.key===" "){idx=(idx+1)%slides.length;updateDeck();}
+  if(e.key==="ArrowLeft"){idx=(idx-1+slides.length)%slides.length;updateDeck();}
+});
+
+// 数据渲染（写死数据）
+function renderMetrics(){
+    const wrap=document.getElementById('metrics');
+    wrap.innerHTML='';
+
+    const data = {
+        fastestSmashKmh: 493,
+        popularPlayers: ["林丹", "李宗伟", "桃田贤斗", "安赛龙"],
+        events: [
+            {year:2023,name:"世锦赛",city:"哥本哈根"},
+            {year:2024,name:"汤姆斯杯",city:"成都"},
+            {year:2024,name:"奥运会",city:"巴黎"}
+        ],
+        venues: 320,
+        participation: 0.36
+    };
+
+    function metricCard(title,value,tip){
+        const el=document.createElement('div');
+        el.className='card';
+        el.innerHTML=`<h3 style="margin:.25rem 0 0 0;">${title}</h3>
+        <p style="font-size:2rem;margin:.25rem 0 0 0;" class="accent">${value}</p>
+        <p class="muted" style="margin:.35rem 0 0 0;">${tip||''}</p>`;
+        return el;
+    }
+
+    wrap.appendChild(metricCard('最快扣杀初速', data.fastestSmashKmh+' km/h','职业赛场测试'));
+    wrap.appendChild(metricCard('热门球员', data.popularPlayers.join('、'),'社群热度统计'));
+    wrap.appendChild(metricCard('近期赛事', data.events.map(e=>`${e.year}·${e.name}@${e.city}`).join(' / '),'国际大赛'));
+    wrap.appendChild(metricCard('本地场馆估计', data.venues+' 个','广州'));
+    wrap.appendChild(metricCard('参与率（样本）', Math.round(data.participation*100)+'%','样本调查'));
+}
+renderMetrics();
+updateDeck();
+
+// 问答逻辑
+const quizTip=document.getElementById('quiz-tip');
+document.querySelectorAll('.quiz .btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        const a=btn.dataset.answer;
+        if(a==='B'){quizTip.textContent='答对了！21分制需要领先2分（最高到30分）。';}
+        else{quizTip.textContent='再想想～ 平分后需领先2分才赢哦。';}
+    });
+});
+</script>
+</body>
+</html>
